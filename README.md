@@ -1,3 +1,13 @@
+Next.js実行 npx create-next-app@latest プロジェクト名
+
+MUI利用　プロジェクトフォルダに移動してから（pwdで階層確認、cdで移動） npm install @mui/material @mui/icons-material @emotion/react @emotion/styled
+
+トップページはapp/pageに記載
+
+（page.jsに'use client'を記述。レンダリングでエラーが発生するため）
+
+CSSはwrapperを付与してグローバルCSSに記述
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
