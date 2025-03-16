@@ -10,6 +10,15 @@ CSSはwrapperを付与してグローバルCSSに記述
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## To Do Next
+①トップページのコンポーネント化
+・ダッシュボード、自己紹介、SNSリンクの3コンポーネントに分割
+・ダッシュボードのWorkボタンクリック時の動作修正。検索テキストボックスの表示をなくす？
+　About、Work、Contactのボタンクリック時にそれぞれのページに遷移させる
+②Aboutページの作成
+・画像の取得
+・レイアウト調整
+
 ## Getting Started
 
 First, run the development server:
