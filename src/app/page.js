@@ -11,6 +11,9 @@ import Autocomplete from '@mui/material/Autocomplete';
 import styles from './ToggleButtons.module.css';
 import Image from 'next/image';
 
+//コンポーネント使用
+import ButtonGroup from "../components/ButtonGroup";
+
 export default function ToggleButtons() {
   const [showSearch, setShowSearch] = React.useState(false);
 
@@ -34,8 +37,13 @@ export default function ToggleButtons() {
         </Stack>
       </div>
 
+      <div>
+      <h1>Welcome to My Page</h1>
+      <ButtonGroup handleDashboardClick={handleDashboardClick} />
+    </div>
+
       {/* 検索フォームをここで条件付き表示 */}
-      {showSearch && (
+      {/* {showSearch && (
         <div style={{ marginTop: '20px', marginBottom: '20px' }}>
           <Stack spacing={2} sx={{ width: 300 }}>
             <Autocomplete
@@ -45,7 +53,7 @@ export default function ToggleButtons() {
             />
           </Stack>
         </div>
-      )}
+      )} */}
 
       <div
       // style={{
