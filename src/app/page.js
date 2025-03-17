@@ -11,8 +11,12 @@ import Autocomplete from '@mui/material/Autocomplete';
 import styles from './ToggleButtons.module.css';
 import Image from 'next/image';
 
+import Link from 'next/link';
+
 //コンポーネント使用
-import ButtonGroup from "../components/ButtonGroup";
+import ButtonGroup from "../../components/ButtonGroup";
+import ProfileSection from '../../components/ProfileSection';
+import SocialIcons from "../../components/SocialIcons";
 
 export default function ToggleButtons() {
   const [showSearch, setShowSearch] = React.useState(false);
@@ -23,89 +27,18 @@ export default function ToggleButtons() {
 
   return (
     <main className={styles.main}>
-      <div>
-        <Stack spacing={2} direction="row" className={styles.stack}>
-          <Button variant="outlined">About</Button>
-          {/* ダッシュボードボタン */}
-          <Button
-            variant="contained"
-            onClick={handleDashboardClick}
-          >
-            Work
-          </Button>
-          <Button variant="outlined">Contact</Button>
-        </Stack>
-      </div>
 
-      <div>
-      <h1>Welcome to My Page</h1>
-      <ButtonGroup handleDashboardClick={handleDashboardClick} />
-    </div>
-
-      {/* 検索フォームをここで条件付き表示 */}
-      {/* {showSearch && (
-        <div style={{ marginTop: '20px', marginBottom: '20px' }}>
-          <Stack spacing={2} sx={{ width: 300 }}>
-            <Autocomplete
-              id="free-solo-demo"
-              freeSolo
-              renderInput={(params) => <TextField {...params} label="検索" />}
-            />
-          </Stack>
+      <div style={{ marginBottom: "20px" }}>
+        <div className='topText'>
+        <h1>Welcome to My Page</h1>
         </div>
-      )} */}
-
-      <div
-      // style={{
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      //   flexDirection: 'column',
-      //   height: '100vh',
-      // }}
-      >
-        <Image
-          src="/profile.png"
-          alt="Profile Image"
-          width={150}
-          height={150}
-          style={{ borderRadius: '50%' }}
-        />
-        <h1>湯元みこと</h1>
+        <ButtonGroup handleDashboardClick={handleDashboardClick} />
       </div>
-      <h3>歴史とファンタジーが大好き<br></br>
-        趣味は遺跡巡りと朝カフェ</h3>
 
-        <Stack
-        spacing={2}
-        direction="row"
-        className={styles.stack}
-        justifyContent="center"
-        alignItems="center"
-      >
-        <IconButton
-          href="https://x.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <XIcon fontSize="large" />
-        </IconButton>
-        <IconButton
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FacebookIcon fontSize="large" />
-        </IconButton>
-        <IconButton
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <InstagramIcon fontSize="large" />
-        </IconButton>
+      <ProfileSection ProfileSection={ProfileSection} />
 
-      </Stack>
+      <SocialIcons SocialIcons={SocialIcons} />
+
     </main>
   );
 }
