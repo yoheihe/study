@@ -18,18 +18,18 @@ export default function ToggleButtons() {
   };
 
   return (
-    <main className={styles.main}>
+    <main className="main-global">
 
       <div className="top-container">
         <div className="topText">
           <h1>Welcome to My Page</h1>
         </div>
-        <ButtonGroup handleDashboardClick={handleDashboardClick} />
+        <ButtonGroup />
       </div>
 
       <ProfileSection />
 
-      <SocialIcons SocialIcons={SocialIcons} />
+      <SocialIcons />
 
     </main>
   );
