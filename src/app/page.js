@@ -24,8 +24,8 @@ export default function ToggleButtons() {
         <div className="topText">
           <h1>Welcome to My Page</h1>
         </div>
-        <ButtonGroup />
       </div>
+        <ButtonGroup />
 
       <ProfileSection />
 

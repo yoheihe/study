@@ -1,12 +1,10 @@
 'use client'
 import * as React from 'react';
-// import '../../styles/global.css';
 
 //コンポーネント使用
 import ButtonGroup from "../components/ButtonGroup";
 import ProfileSection from '../components/ProfileSection';
 import SocialIcons from "../components/SocialIcons";
-// import '../../styles/globals.css';
 
 export default function About() {
   return (
@@ -16,11 +14,10 @@ export default function About() {
         <div className="topText">
           <h1>Welcome to My Page</h1>
         </div>
+      </div>
         <ButtonGroup />
-      </div>
-      <div className="about-profile">
-        <ProfileSection />
-      </div>
+
+      <ProfileSection />
 
       <SocialIcons />
 
