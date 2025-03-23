@@ -1,5 +1,7 @@
 'use client'
 import * as React from 'react';
+import '../src/app/globals.css';
+
 
 //コンポーネント使用
 import ButtonGroup from "../components/ButtonGroup";
