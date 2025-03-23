@@ -18,6 +18,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ②Aboutページの作成
 ・画像の取得
 ・レイアウト調整
+　globals.cssを当てるもCSSが崩れる。ファイルの読み込みパスが違っている。現在のファイルの位置を基準に対象ファイルまでのパスを記述する。../はひとつ上の階層を指定。
+
+ study/
+│── src/
+│   ├── app/
+│   │   ├── globals.css
+│── pages/
+│   ├── about.js
 
 ## Getting Started
 
