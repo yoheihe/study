@@ -32,7 +32,7 @@ export default function AboutPage() {
         <div className="about-profile-item">
           <div className="about-profile-image">
             <Image
-              src="/profile-baseball.png"
+              src="/img/profile-baseball.png"
               alt="Baseball Image"
               width={150}
               height={150}
@@ -46,7 +46,7 @@ export default function AboutPage() {
         <div className="about-profile-item">
           <div className="about-profile-image">
             <Image
-              src="/profile-haniwa.png"
+              src="/img/profile-haniwa.png"
               alt="Haniwa Image"
               width={150}
               height={150}
@@ -60,7 +60,7 @@ export default function AboutPage() {
         <div className="about-profile-item">
           <div className="about-profile-image">
             <Image
-              src="/profile-mangekyo.png"
+              src="/img/profile-mangekyo.png"
               alt="Mangekyo Image"
               width={150}
               height={150}
@@ -74,7 +74,7 @@ export default function AboutPage() {
         <div className="about-profile-item">
           <div className="about-profile-image">
             <Image
-              src="/profile-jogging.png"
+              src="/img/profile-jogging.png"
               alt="Jogging Image"
               width={150}
               height={150}
