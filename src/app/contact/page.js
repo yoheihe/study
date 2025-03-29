@@ -29,15 +29,33 @@ const Contact = () => {
     }
 
     return (
-        <div>
-            <h1>コンタクト</h1>
-            <form onSubmit={handleSubmit}>
-                <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="お名前" required/>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" placeholder="メールアドレス" required/>
-                <textarea value={message} onChange={(e) => setMessage(e.target.value)} type="text" placeholder="メッセージ" rows="10" required></textarea>
-                <button type="submit">送信</button>
-            </form> 
-        </div>
+<div className="contact-container">
+    <h1 className="contact-title">お問い合わせ</h1>
+    <form className="contact-form" onSubmit={handleSubmit}>
+        <input 
+            value={name} 
+            onChange={(e) => setName(e.target.value)} 
+            type="text" 
+            placeholder="お名前" 
+            required
+        />
+        <input 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            type="email" 
+            placeholder="メールアドレス" 
+            required
+        />
+        <textarea 
+            value={message} 
+            onChange={(e) => setMessage(e.target.value)} 
+            placeholder="メッセージ" 
+            rows="5" 
+            required
+        ></textarea>
+        <button type="submit" className="contact-button">送信</button>
+    </form> 
+</div>
     )
 }
 
