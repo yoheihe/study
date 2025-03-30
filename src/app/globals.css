@@ -120,6 +120,7 @@ img {
 /* コンタクトページ */
 .contact-container {
   max-width: 500px;
+  width: 90%;
   margin: 50px auto;
   padding: 20px;
   text-align: center;
@@ -142,6 +143,7 @@ img {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
+  max-width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
