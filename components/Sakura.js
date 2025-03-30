@@ -6,7 +6,7 @@ const Sakura = () => {
   const [petals, setPetals] = useState([]);
 
   useEffect(() => {
-    const numPetals = 20; // 桜の数
+    const numPetals = 20;
     setPetals([...Array(numPetals).keys()]);
   }, []);
 
@@ -17,9 +17,9 @@ const Sakura = () => {
           key={i}
           className={styles.sakura}
           style={{
-            left: `${Math.random() * 100}vw`, // ランダムな位置
-            animationDuration: `${Math.random() * 5 + 5}s`, // ランダムな落下時間
-            animationDelay: `${Math.random() * 5}s`, // ランダムな開始時間
+            left: `${Math.random() * 100}vw`,
+            animationDuration: `${Math.random() * 5 + 5}s`,
+            animationDelay: `${Math.random() * 5}s`,
           }}
         />
       ))}

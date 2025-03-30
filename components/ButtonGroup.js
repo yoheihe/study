@@ -6,7 +6,7 @@ const ButtonGroup = () => {
   return (
     <div>
       <Stack spacing={2} direction="row">
-      <Link href="/" passHref legacyBehavior>
+        <Link href="/" passHref legacyBehavior>
           <Button variant="outlined">Home</Button>
         </Link>
         <Link href="/about" passHref legacyBehavior>
@@ -15,8 +15,9 @@ const ButtonGroup = () => {
         <Link href="/work" passHref legacyBehavior>
           <Button variant="outlined">Work</Button>
         </Link>
-
-        <Button variant="outlined">Contact</Button>
+        <Link href="/contact" passHref legacyBehavior>
+          <Button variant="outlined">Contact</Button>
+        </Link>
       </Stack>
     </div>
   )
