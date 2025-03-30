@@ -7,8 +7,8 @@ import styles from './ToggleButtons.module.css';
 
 //コンポーネント使用
 import ButtonGroup from "../../components/ButtonGroup";
-import ProfileSection from '../../components/ProfileSection';
-import SocialIcons from "../../components/SocialIcons";
+import ProfileSection from '../../components/ProfileSectionGroup';
+import SocialIcons from "../../components/SocialIconGroup";
 
 export default function ToggleButtons() {
   const [showSearch, setShowSearch] = React.useState(false);

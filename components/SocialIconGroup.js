@@ -3,7 +3,7 @@ import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
-const SocialIcons = () => {
+const SocialIconGroup = () => {
   return (
     <Stack spacing={2} direction="row" justifyContent="center" alignItems="center">
       <div className="icon-container">
@@ -21,4 +21,4 @@ const SocialIcons = () => {
   );
 };
 
-export default SocialIcons;
+export default SocialIconGroup;

@@ -85,7 +85,7 @@ img {
 }
 
 .profile-image {
-  flex-shrink: 0; /* 画像のサイズを維持する */
+  flex-shrink: 0;
 }
 
 .about-text {
@@ -165,3 +165,4 @@ img {
 .contact-button:hover {
   background-color: #0056b3;
 }
+

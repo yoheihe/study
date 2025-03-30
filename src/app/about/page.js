@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 //コンポーネント使用
 import ButtonGroup from "../../../components/ButtonGroup";
-import SocialIcons from "../../../components/SocialIcons";
+import SocialIcons from "../../../components/SocialIconGroup";
 
 export default function AboutPage() {
   return (
@@ -32,7 +32,7 @@ export default function AboutPage() {
         <div className="about-profile-item">
           <div className="about-profile-image">
             <Image
-              src="/img/profile-baseball.png"
+              src="/img/profile-item-baseball.png"
               alt="Baseball Image"
               width={150}
               height={150}
@@ -46,7 +46,7 @@ export default function AboutPage() {
         <div className="about-profile-item">
           <div className="about-profile-image">
             <Image
-              src="/img/profile-haniwa.png"
+              src="/img/profile-item-haniwa.png"
               alt="Haniwa Image"
               width={150}
               height={150}
@@ -60,7 +60,7 @@ export default function AboutPage() {
         <div className="about-profile-item">
           <div className="about-profile-image">
             <Image
-              src="/img/profile-mangekyo.png"
+              src="/img/profile-item-mangekyo.png"
               alt="Mangekyo Image"
               width={150}
               height={150}
@@ -74,7 +74,7 @@ export default function AboutPage() {
         <div className="about-profile-item">
           <div className="about-profile-image">
             <Image
-              src="/img/profile-jogging.png"
+              src="/img/profile-item-jogging.png"
               alt="Jogging Image"
               width={150}
               height={150}

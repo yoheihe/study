@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const ProfileSection = () => {
+const ProfileSectionGroup = () => {
   return (
     <div className="profile-container">
       <div className="profile-image">
@@ -20,4 +20,4 @@ const ProfileSection = () => {
   );
 };
 
-export default ProfileSection;
+export default ProfileSectionGroup;
