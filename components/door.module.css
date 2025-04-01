@@ -1,0 +1,48 @@
+.doorContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 100;
+  transition: opacity 1s ease-in-out;
+}
+
+.doorLeft, .doorRight {
+  width: 50vw;
+  height: 100vh;
+  background-color: brown;
+  position: absolute;
+  top: 0;
+  transition: transform 2s ease-in-out;
+}
+
+.doorLeft {
+  left: 0;
+  transform-origin: left center;
+}
+
+.doorRight {
+  right: 0;
+  transform-origin: right center;
+}
+
+/* 扉が開くアニメーション */
+.open .doorLeft {
+  transform: translateX(-100%);
+}
+
+.open .doorRight {
+  transform: translateX(100%);
+}
+
+/* アニメーション完了後に消す */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}

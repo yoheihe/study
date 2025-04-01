@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "./Sakura.module.css";
+import styles from "./sakura.module.css";
 
 const Sakura = () => {
   const [petals, setPetals] = useState([]);

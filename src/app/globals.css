@@ -116,6 +116,39 @@ img {
   margin-top: 10px;
 }
 
+/* Worksページ */
+.works-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.works-about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.works-Contaniner {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.works-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.works-bio {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.flipped {
+  transform: scaleY(-1);
+  transition: transform 0.3s ease-in-out;
+}
+
 
 /* コンタクトページ */
 .contact-container {

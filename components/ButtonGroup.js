@@ -12,8 +12,8 @@ const ButtonGroup = () => {
         <Link href="/about" passHref legacyBehavior>
           <Button variant="outlined">About</Button>
         </Link>
-        <Link href="/work" passHref legacyBehavior>
-          <Button variant="outlined">Work</Button>
+        <Link href="/works" passHref legacyBehavior>
+          <Button variant="outlined">Works</Button>
         </Link>
         <Link href="/contact" passHref legacyBehavior>
           <Button variant="outlined">Contact</Button>
