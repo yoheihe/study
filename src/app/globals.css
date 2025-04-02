@@ -117,6 +117,33 @@ img {
 }
 
 /* Worksページ */
+.works-list {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  padding: 10px 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.works-link {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e52e71;
+  text-decoration: none;
+  border: 2px solid #e52e71;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.works-link:hover {
+  background: #e52e71;
+  color: white;
+}
+
 .works-container {
   text-align: center;
   margin-top: 20px;
@@ -125,6 +152,7 @@ img {
 .works-about-image {
   display: flex;
   justify-content: center;
+  margin: 20px;
 }
 
 .works-Contaniner {
@@ -136,12 +164,22 @@ img {
   font-size: 24px;
   font-weight: bold;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .works-bio {
   font-size: 18px;
   color: #555;
   line-height: 1.5;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.normal {
+  transform: scaleY(1); /* 通常の状態 */
+  transition: transform 0.5s ease-in-out;
 }
 
 .flipped {
