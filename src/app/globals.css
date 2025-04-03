@@ -240,3 +240,32 @@ img {
   background-color: #0056b3;
 }
 
+.privacy-policy-box {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  max-height: 150px; /* 長すぎる場合にスクロール */
+  overflow-y: auto;
+  font-size: 14px;
+  text-align: left;
+}
+
+.privacy-policy-box h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.privacy-policy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.privacy-policy input {
+  width: 16px;
+  height: 16px;
+}
