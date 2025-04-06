@@ -1,19 +1,15 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { Button, Menu, MenuItem, Fade } from '@mui/material';
+import React, { useState } from 'react';
+import { AppBar, Toolbar, Button, Menu, MenuItem, Fade, Stack, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
 
-export default function FadeMenu() {
+import styles from './Header.module.css';
+
+export default function ResponsiveHeader() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const handleClick = (event) => setAnchorEl(event.currentTarget);
+  const handleClose = () => setAnchorEl(null);
 
   const menuItems = [
     { href: '/', label: 'Home' },
@@ -22,34 +18,48 @@ export default function FadeMenu() {
     { href: '/contact', label: 'Contact' },
   ];
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
-    <div>
-      <Button
-        id="fade-button"
-        aria-controls={open ? 'fade-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-        variant="outlined"
-      >
-        Menu
-      </Button>
-      <Menu
-        id="fade-menu"
-        MenuListProps={{
-          'aria-labelledby': 'fade-button',
-        }}
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        TransitionComponent={Fade}
-      >
-        {menuItems.map((item) => (
-          <Link key={item.href} href={item.href} passHref legacyBehavior>
-            <MenuItem onClick={handleClose}>{item.label}</MenuItem>
-          </Link>
-        ))}
-      </Menu>
-    </div>
+    <AppBar position="sticky" color="default" elevation={1}>
+      <Toolbar>
+        {isMobile ? (
+          <div className={styles.centerContainer}>
+            <Button
+              variant="outlined"
+              onClick={handleClick}
+              aria-controls={open ? 'fade-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? 'true' : undefined}
+            >
+              Menu
+            </Button>
+            <Menu
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              TransitionComponent={Fade}
+            >
+              {menuItems.map((item) => (
+                <Link key={item.href} href={item.href} passHref legacyBehavior>
+                  <MenuItem onClick={handleClose}>{item.label}</MenuItem>
+                </Link>
+              ))}
+            </Menu>
+          </div>
+        ) : (
+          <div className={styles.centerContainer}>
+            <Stack spacing={2} direction="row">
+              {menuItems.map((item) => (
+                <Link key={item.href} href={item.href} passHref legacyBehavior>
+                  <Button variant="outlined">{item.label}</Button>
+                </Link>
+              ))}
+            </Stack>
+          </div>
+        )}
+      </Toolbar>
+    </AppBar>
   );
 }
