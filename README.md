@@ -38,6 +38,18 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 │   ├── about.js
 </pre>
 
+2025.4.5
+・メニューバーの固定
+　MUIのAppBar position="sticky"にて実装
+・メニューのスマホ対応（レスポンシブ）
+　useMediaQuery + theme.breakpoints.down('sm') を使って画面サイズを判定
+　down('sm') → スマホ（600px以下）のときにtrue
+　isMobile フラグで表示内容を切り替え
+ ※アニメーションにするか検討（npm install framer-motion）
+・リポジトリの再作成とデータ移行
+・READMEの精査
+・リスト用のページを作成（好きな本）
+
 ## Getting Started
 
 First, run the development server:
