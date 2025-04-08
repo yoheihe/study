@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Button, Menu, MenuItem, Fade, Stack, useMediaQuery } f
 import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
 
-import styles from './Header.module.css';
+import styles from '../src/app/globals.css';
 
 export default function ResponsiveHeader() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -25,7 +25,7 @@ export default function ResponsiveHeader() {
     <AppBar position="sticky" color="default" elevation={1}>
       <Toolbar>
         {isMobile ? (
-          <div className={styles.centerContainer}>
+          <div className="centerContainer">
             <Button
               variant="outlined"
               onClick={handleClick}
@@ -49,7 +49,7 @@ export default function ResponsiveHeader() {
             </Menu>
           </div>
         ) : (
-          <div className={styles.centerContainer}>
+          <div className="centerContainer">
             <Stack spacing={2} direction="row">
               {menuItems.map((item) => (
                 <Link key={item.href} href={item.href} passHref legacyBehavior>

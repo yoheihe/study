@@ -269,3 +269,37 @@ img {
   width: 16px;
   height: 16px;
 }
+
+/* BUttonGroupコンポーネント */
+.centerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* Sakuraコンポーネント */
+/* 桜の落下アニメーション */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(30px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 桜の花びら */
+.sakura {
+  position: fixed;
+  top: -10vh; /* 画面の上から降らせる */
+  width: 15px; /* 花びらの大きさ */
+  height: 15px;
+  background-color: pink; /* 花びらの色 */
+  border-radius: 50% 70% 50% 70%; /* 楕円形にする */
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
